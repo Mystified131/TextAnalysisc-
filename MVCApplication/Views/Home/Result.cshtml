@@ -1,0 +1,25 @@
+﻿@model MVCApplication.ViewModels.ResultViewModel
+
+@{
+    ViewData["Title"] = "Result";
+}
+
+<h2>Result</h2>
+
+<br />
+
+<h4>The analyzed text would be:</h4>
+
+@foreach (string item in Model.replist2)
+{
+
+    @item
+
+}
+
+<br />
+
+<br />
+
+<p>@Model.Error</p><br />
+

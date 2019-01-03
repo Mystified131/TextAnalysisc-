@@ -1,0 +1,17 @@
+﻿@model MVCApplication.ViewModels.IndexViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Input</h2>
+
+<form action='Home/Result' method='POST' align="left">
+    <label>
+        Please enter text to analyze:
+    </label><br><br>
+        <input name="content" type="text" value="" />
+    <br /><br />
+    <input type="submit" value="Analyze Text" />
+
+</form>
