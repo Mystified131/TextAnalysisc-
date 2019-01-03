@@ -23,7 +23,7 @@ namespace MVCApplication.Models
         {
             StringBuilder tatstr = new StringBuilder();
             StringBuilder adstr = new StringBuilder();
-            Dictionary<string, int> wonder = new Dictionary<string, int>();
+            Dictionary<string, double> wonder = new Dictionary<string, double>();
             List<string> setfin = new List<string>();           
             List<string> super = new List<string>();
             List<string> replist = new List<string>();
@@ -55,10 +55,11 @@ namespace MVCApplication.Models
 
             }
 
-               foreach (KeyValuePair<string, int> item in wonder)
+               foreach (KeyValuePair<string, double> item in wonder)
             {
                 adstr.Clear();
-                string elem = item.Value.ToString();
+                double newval = item.Value / 10000;
+                string elem = newval.ToString();
                 adstr.Append(elem);
                 adstr.Append(": ");
                 for (int j = 0; j < item.Value; j++) { 
