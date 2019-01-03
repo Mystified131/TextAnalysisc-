@@ -11,7 +11,7 @@ namespace MVCApplication.ViewModels
     {
         [Required]
         public string content { get; set; }
-        public List<string> replist2 { get; set; }
+        public Dictionary<string, int> retDict { get; set; }
         public String Error { get; set; }
     }
 }

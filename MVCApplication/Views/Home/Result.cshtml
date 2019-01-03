@@ -6,18 +6,22 @@
 
 <h2>Result</h2>
 
-@if(Model.replist2 != null) {
+@if (Model.retDict != null)
+{
 
     <br />
 
-<h4>The analyzed text would be:</h4>
+    <h4>The analyzed text would be:</h4>
 
-@foreach (string item in Model.replist2)
-{
-
-    @item
+    @foreach (KeyValuePair<string, int> item in Model.retDict)
+    {
+        @for (int i = 0; i < item.Value; i++)
+        {
+            @item.Key  
 
 }
+
+    }
 
 }
 

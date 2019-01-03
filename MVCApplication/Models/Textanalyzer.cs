@@ -19,11 +19,12 @@ namespace MVCApplication.Models
         }
 
 
-        public List<string> Analyze(string content)
+        public Dictionary<string, int> Analyze(string content)
         {
             StringBuilder tatstr = new StringBuilder();
             StringBuilder adstr = new StringBuilder();
-            Dictionary<string, double> wonder = new Dictionary<string, double>();
+            Dictionary<string, int> wonder = new Dictionary<string, int>();
+            Dictionary<string, int> retDict = new Dictionary<string, int>();
             List<string> setfin = new List<string>();           
             List<string> super = new List<string>();
             List<string> replist = new List<string>();
@@ -35,6 +36,7 @@ namespace MVCApplication.Models
 
             foreach (var item in superman)
             {
+              
                 super.Add(item);
 
             }
@@ -50,31 +52,23 @@ namespace MVCApplication.Models
                 else
                 {
                     setfin.Add(super[i]);
-                    wonder.Add(super[i], 1);
+                    wonder.Add((super[i]), 1);
                 }
 
             }
 
-               foreach (KeyValuePair<string, double> item in wonder)
+            var NewD = wonder.OrderByDescending(x => x.Key);
+            var newDict = NewD.OrderByDescending(x => x.Value);
+
+            foreach (var item in newDict)
             {
-                adstr.Clear();
-                double newval = item.Value / 10000;
-                string elem = newval.ToString();
-                adstr.Append(elem);
-                adstr.Append(": ");
-                for (int j = 0; j < item.Value; j++) { 
-                    adstr.Append(item.Key);
-                adstr.Append("  ");
-                }
-                string addstr = adstr.ToString();
-                replist2.Add(addstr);
+
+                string newstr = item.Key + " ";
+                retDict.Add(newstr, item.Value);
 
             }
 
-            replist2.Sort();
-            replist2.Reverse();
-
-            return replist2;
+            return retDict;
             
           
 

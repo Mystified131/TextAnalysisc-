@@ -43,7 +43,7 @@ namespace MVCApplication.Controllers
 
                 Textanalyzer qbert = new Textanalyzer("qbert");
 
-                resultViewModel.replist2 = qbert.Analyze(resultViewModel.content);
+                resultViewModel.retDict = qbert.Analyze(resultViewModel.content);
 
                 return View(resultViewModel);
 
