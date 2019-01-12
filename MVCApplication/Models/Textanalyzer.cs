@@ -40,7 +40,60 @@ namespace MVCApplication.Models
                 super.Add(item);
 
             }
-            
+
+
+            List<string> outlst = new List<string>();
+            outlst.Add("of");
+            outlst.Add("on");
+            outlst.Add("the");
+            outlst.Add("he");
+            outlst.Add("she");
+            outlst.Add("or");
+            outlst.Add("it");
+            outlst.Add("its");
+            outlst.Add("and");
+            outlst.Add("in");
+            outlst.Add("for");
+            outlst.Add("i");
+            outlst.Add("him");
+            outlst.Add("her");
+            outlst.Add("a");
+            outlst.Add("an");
+            outlst.Add("is");
+            outlst.Add("to");
+            outlst.Add("was");
+            outlst.Add("that");
+            outlst.Add("is");
+            outlst.Add("had");
+            outlst.Add("by");
+            outlst.Add("at");
+            outlst.Add("as");
+            outlst.Add("his");
+            outlst.Add("would");
+            outlst.Add("which");
+            outlst.Add("would");
+            outlst.Add("when");
+            outlst.Add("where");
+            outlst.Add("why");
+            outlst.Add("if");
+            outlst.Add("then");
+
+
+            foreach (var item in superman)
+            {
+                foreach(var otem in outlst)
+                {
+                    if(item == otem)
+                    {
+
+                        super.Remove(item);
+
+                    }
+
+                }
+
+            }
+
             int lim = super.Count();
             for(int i = 0; i < lim; i++)
             {
