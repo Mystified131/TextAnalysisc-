@@ -77,6 +77,13 @@ namespace MVCApplication.Models
             outlst.Add("why");
             outlst.Add("if");
             outlst.Add("then");
+            outlst.Add("with");
+            outlst.Add("what");
+            outlst.Add("we");
+            outlst.Add("this");
+            outlst.Add("my");
+            outlst.Add("our");
+            outlst.Add("their");
 
 
             foreach (var item in superman)
