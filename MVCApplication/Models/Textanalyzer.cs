@@ -84,6 +84,10 @@ namespace MVCApplication.Models
             outlst.Add("my");
             outlst.Add("our");
             outlst.Add("their");
+            outlst.Add("there");
+            outlst.Add("but");
+            outlst.Add("are");
+            outlst.Add("were");
 
 
             foreach (var item in superman)
